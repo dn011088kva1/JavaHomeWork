@@ -18,7 +18,13 @@ public class Calculator {
             case "+":  System.out.print(operand1 + operand2);break;
             case "-":  System.out.print(operand1 - operand2);break;
             case "*":  System.out.print(operand1 * operand2);break;
-            case "/":  System.out.print(operand1 / operand2);break;
+            case "/":
+                if (operand2 ==0){
+                    System.out.print("на 0 делить нельзя ");
+                }
+                else {
+                    System.out.print(operand1 / operand2);}
+                break;
             default: System.out.print("Ввели неправильный арифметический знак");
         }
     }
