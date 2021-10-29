@@ -1,21 +1,31 @@
 package com.pb.Koritskiy.hw3;
-
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Array {
     public static void main(String[] args) {
-        int i, array [];
+        int  array [];
+        int sum = 0;
+        int counter =0;
         Scanner input = new Scanner(System.in);
         array = new int [10];
         System.out.println("Введите 10 произвольных чисел: ");
-        for (i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             array [i] = input.nextInt();
         }
-        System.out.println("Сумма всех чисел равна: " + (array[0]+array[1]+array[2]+array[3]+array[4]+array[5]+array[6]+array[7]+array[8]+array[9]));
+        for (int i = 0; i < array.length; i++) {
+            sum = sum + array[i];
+        }
+        System.out.println("Сумма всех елементов массива = " +sum);
 
+      for (int i = 0; i < array.length; i++) {
+            if (array[i] > 0) {
+                sum = sum + array[i];
+                counter ++;
+            }
 
-
+        }
+      System.out.println("Количество положительных элементов массива = "+counter);
 
 
 
@@ -25,6 +35,7 @@ public class Array {
 
 
     }
+
     public static void bubbleSort (int[] num) {
         int j;
         boolean flag = true;
