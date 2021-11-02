@@ -2,7 +2,7 @@ package com.pb.Koritskiy.hw4;
 
 import java.util.Scanner;
 
-public class CapitalLetter {
+/*public class CapitalLetter {
     public static void main(String[] args) {
 
         String words;
@@ -28,3 +28,4 @@ public class CapitalLetter {
 }
 
 }
+*/
