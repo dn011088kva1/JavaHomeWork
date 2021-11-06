@@ -1,8 +1,8 @@
 package com.pb.Koritskiy.hw5;
 
 public class Book {
-    String nameBook;
-    String author;
-    int year;
+    public String nameBook;
+    public String author;
+    public String year;
 
 }
