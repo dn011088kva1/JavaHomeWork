@@ -1,44 +1,35 @@
 package com.pb.Koritskiy.hw5;
 
+import java.time.LocalDate;
+
 public class Library {
     public static void main(String[] args) {
+        Reader reader1 = new Reader("Петров В.В.",123,"ИТ", LocalDate.of(1988, 01, 01), "0631788847");
+        Reader reader2 = new Reader("Иванов И.И.",124,"ИТ", LocalDate.of(1989, 07, 21), "1234555667");
+        System.out.println(reader1);
+        System.out.println(reader2);
+
+        Book book1 = new Book("Приключения","Иванов И. И.",2000);
+        Book book2 = new Book("Словарь","Сидоров А. В.",1980);
+        Book book3 = new Book("Энциклопедия","Гусев К. В.",2010);
+        System.out.println(book1);
+        System.out.println(book2);
+        System.out.println(book3);
 
 
-        Reader reader1 = new Reader();
-        reader1.FIO = "Петров В.В. ";
         reader1.takeBook(3);
-
-        Book nameBook1 = new Book();
-        Book nameBook2 = new Book();
-        Book nameBook3 = new Book();
-
-        nameBook1.nameBook = "Приключения, ";
-        nameBook2.nameBook = "Словарь, ";
-        nameBook3.nameBook = "Энциклопедия. ";
-
-        reader1.takeBook(nameBook1.nameBook, nameBook2.nameBook,nameBook3.nameBook);
-
-        Book author1 = new Book();
-        Book author2 = new Book();
-        Book author3 = new Book();
-        author1.author="Иванов И. И.";
-        author2.author="Сидоров А. В.";
-        author3.author="Гусев К. В.";
-
-        Book year1 =  new Book();
-        Book year2 =  new Book();
-        Book year3 =  new Book();
-
-        year1.year="2000 г.";
-        year2.year="1980 г.";
-        year3.year="2010 г.";
-
-        reader1.takeBook(nameBook1.nameBook,author1.author,year1.year,nameBook2.nameBook,author2.author,year2.year,nameBook3.nameBook,author3.author,year3.year);
+        reader1.takeBook("Приключения","Словарь","Энциклопедия");
+       reader1.takeBook(book1,book2,book3);
 
 
         reader1.returnBook(3);
-        reader1.returnBook(nameBook1.nameBook, nameBook2.nameBook,nameBook3.nameBook);
-        reader1.returnBook(nameBook1.nameBook,author1.author,year1.year,nameBook2.nameBook,author2.author,year2.year,nameBook3.nameBook,author3.author,year3.year);
+        reader1.returnBook("Приключения","Словарь","Энциклопедия");
+        reader1.returnBook(book1,book2,book3);
+
+
+
+
     }
-    }
+}
+
 
